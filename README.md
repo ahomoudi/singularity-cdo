@@ -14,7 +14,7 @@ sudo singularity build singularity-cdo.sif singularity-cdo.def
 
 ## Run 
 
-```
+```{bash}
 foo@bar:~$ singularity shell singularity-cdo.sif 
 Singularity> cdo -V
 Climate Data Operators version 2.1.1 (https://mpimet.mpg.de/cdo)
@@ -41,7 +41,7 @@ CDI file types: srv ext ieg grb1 grb2 nc1 nc2 nc4 nc4c nc5 nczarr
 ## Examples
 
 ```
-foo@bar:~$ singularity exec Sing_CDO.sif cdo sinfo era5_quv.nc 
+foo@bar:~$ singularity exec singularity-cdo.sif cdo sinfo era5_quv.nc 
    File format : NetCDF2
     -1 : Institut Source   T Steptype Levels Num    Points Num Dtype : Parameter ID
      1 : unknown  unknown  v instant      37   1     24321   1  I16  : -1            
@@ -65,7 +65,7 @@ cdo    sinfo: Processed 3 variables over 1 timestep [0.05s 25MB]
 
 ```
 # another example
-foo@bar:~$ singularity exec Sing_CDO.sif cdo selname,q era5_quv.nc era5_q.nc
+foo@bar:~$ singularity exec singularity-cdo.sif cdo selname,q era5_quv.nc era5_q.nc
 cdo    selname: Processed 899877 values from 3 variables over 1 timestep [0.10s 26MB]
 ```
 
